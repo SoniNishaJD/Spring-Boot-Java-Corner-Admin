@@ -3,9 +3,13 @@ package com.JavacornerAdminspringboot.Dto;
 public class InstructorDTO {
 
     private Long instructorId;
+    
     private String firstName;
+    
     private String lastName;
+    
     private String summary;
+    
     private UserDTO user;
 
     public Long getInstructorId() {

@@ -3,6 +3,7 @@ package com.JavacornerAdminspringboot.ServiceImpl;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.persistence.EntityNotFoundException;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -20,7 +21,6 @@ import com.JavacornerAdminspringboot.service.CourseService;
 import com.JavacornerAdminspringboot.service.InstructorService;
 import com.JavacornerAdminspringboot.service.UserService;
 
-import jakarta.persistence.EntityNotFoundException;
 
 
 @Service

@@ -24,7 +24,7 @@ public class MyRunner implements CommandLineRunner {
 
 	@Autowired
 	private UserService userService;
-
+//
 	@Autowired
 	private InstructorService instructorService;
 

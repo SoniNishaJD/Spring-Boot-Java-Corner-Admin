@@ -7,21 +7,21 @@ import com.JavacornerAdminspringboot.Entity.Course;
 
 public interface CourseService {
 	
-	Course loadCourseById (Long courseId);
-	
-	CourseDTO createCourse (CourseDTO courseDto);
-	
-	CourseDTO updateCourse (CourseDTO courseDto);
-	
-	Page<CourseDTO> findCoursesByCourseName(String keyword, int page,int size);
-	
-	void assignStudentToCourse(Long courserId, Long StudentId);
-	
-	void removeCourse(Long courseId);
-	
-	Page<CourseDTO> fetchNonEnrolledInCoursesForStudent(Long studentId, int page, int size);
+	 Course loadCourseById(Long courseId);
 
-	Page<CourseDTO> fetchCoursesForInstructor(Long instructorId, int page, int size);
+	    CourseDTO createCourse(CourseDTO courseDTO);
 
-	Page<CourseDTO> fetchCoursesForStudent(Long studentId, int page, int size);
+	    CourseDTO updateCourse(CourseDTO courseDTO);
+
+	    Page<CourseDTO> findCoursesByCourseName(String keyword, int page, int size);
+
+	    void assignStudentToCourse(Long courseId, Long studentId);
+
+	    Page<CourseDTO> fetchCoursesForStudent(Long studentId,int page, int size);
+
+	    Page<CourseDTO> fetchNonEnrolledInCoursesForStudent(Long studentId, int page, int size);
+
+	    void removeCourse(Long courseId);
+
+	    Page<CourseDTO> fetchCoursesForInstructor(Long instructorId, int page, int size);
 }

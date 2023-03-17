@@ -3,6 +3,8 @@ package com.JavacornerAdminspringboot.ServiceImpl;
 import java.util.Iterator;
 import java.util.stream.Collectors;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -18,7 +20,6 @@ import com.JavacornerAdminspringboot.mapper.StudentMapper;
 import com.JavacornerAdminspringboot.service.StudentService;
 import com.JavacornerAdminspringboot.service.UserService;
 
-import jakarta.persistence.EntityNotFoundException;
 
 @Service
 @Transactional

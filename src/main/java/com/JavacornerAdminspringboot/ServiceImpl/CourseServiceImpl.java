@@ -2,6 +2,8 @@ package com.JavacornerAdminspringboot.ServiceImpl;
 
 import java.util.stream.Collectors;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -18,14 +20,11 @@ import com.JavacornerAdminspringboot.dao.StudentDao;
 import com.JavacornerAdminspringboot.mapper.CourseMapper;
 import com.JavacornerAdminspringboot.service.CourseService;
 
-import jakarta.persistence.EntityNotFoundException;
-
-
 @Service
 @Transactional
 public class CourseServiceImpl implements CourseService {
 
-    private CourseDao courseDao;
+	private CourseDao courseDao;
 
     private CourseMapper courseMapper;
 
