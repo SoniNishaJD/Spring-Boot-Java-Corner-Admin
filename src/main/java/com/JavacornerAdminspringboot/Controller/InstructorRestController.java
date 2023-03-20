@@ -23,7 +23,7 @@ import com.JavacornerAdminspringboot.service.InstructorService;
 import com.JavacornerAdminspringboot.service.UserService;
 
 @RestController
-@RequestMapping("/instructors")
+@RequestMapping("/instructor")
 @CrossOrigin("*")
 public class InstructorRestController {
 
@@ -40,14 +40,14 @@ public class InstructorRestController {
     }
 
     @GetMapping
-    public Page<InstructorDTO> searchInstructors(@RequestParam(name = "keyword", defaultValue = "") String keyword,
+    public Page<InstructorDTO> searchInstructor(@RequestParam(name = "keyword", defaultValue = "") String keyword,
                                                  @RequestParam(name = "page", defaultValue = "0") int page,
                                                  @RequestParam(name = "size", defaultValue = "5") int size) {
         return instructorService.findInstructorsByName(keyword, page, size);
     }
 
     @GetMapping("/all")
-    public List<InstructorDTO> findAllInstructors() {
+    public List<InstructorDTO> findAllInstructor() {
         return instructorService.fetchInstructors();
     }
 

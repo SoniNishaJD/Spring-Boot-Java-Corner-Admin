@@ -57,7 +57,7 @@ public class StudentRestController {
     }
 
     @PutMapping("/{studentId}")
-    public StudentDTO updateStudent(@RequestBody StudentDTO studentDTO, @PathVariable Long studentId) {
+    public StudentDTO updateStudents(@RequestBody StudentDTO studentDTO, @PathVariable Long studentId) {
         studentDTO.setStudentId(studentId);
         return studentService.updateStudent(studentDTO);
     }

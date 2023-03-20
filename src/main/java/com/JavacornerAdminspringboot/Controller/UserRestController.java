@@ -21,6 +21,8 @@ public class UserRestController {
     public boolean checkIfEmailExists(@RequestParam(name = "email",defaultValue = "") String email) {
         return userService.loadUserByEmail(email) != null;
     }
+    
+    
 }
 
 
