@@ -33,9 +33,9 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-//        if (request.getServletPath().equals("/refresh-token")) {
-//            filterChain.doFilter(request, response);
-//        } else {
+        if (request.getServletPath().equals("/refresh-token")) {
+            filterChain.doFilter(request, response);
+        } else {
             String accessToken = jwtHelper.extractTokenFromHeaderIfExists(request.getHeader(AUTH_HEADER));
             if (accessToken != null) {
                 Algorithm algorithm = Algorithm.HMAC256(SECRET);
@@ -55,4 +55,4 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
             }
         }
     	    }
-
+}
